@@ -5,7 +5,7 @@ class Vehiculo(models.Model):
     MARCAS = [ ('Fiat', 'Fiat'), ('Chevrolet', 'Chevrolet'), ('Ford', 'Ford'), ('Toyota', 'Toyota'), ]
     CATEGORIAS = [ ('Particular', 'Particular'), ('Publico', 'Publico'), ('Carga', 'Carga'), ]
 
-    marca = models.CharField(max_length=20)
+    marca = models.CharField(max_length=20, choices=MARCAS, default=[0])
     modelo = models.CharField(max_length=50)
     serial_carroceria = models.CharField(max_length=50)
     serial_motor = models.CharField(max_length=50)
